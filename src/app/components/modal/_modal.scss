@@ -1,0 +1,31 @@
+.opened {
+
+}
+
+.closed {
+	display: none;
+}
+
+.save-recipe {
+	@include button-std;
+}
+.react-modal {
+	position: fixed;
+	width: 60%;
+	z-index: 1;
+	background: $container-bg-color;
+	border: 2px solid black;
+}
+
+.react-modal-header {
+	color: yellow;
+
+}
+
+.react-modal-content {
+	padding: 2% 1%;
+}
+.modal-close {
+	float: right;
+	@include button-std;
+}

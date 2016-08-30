@@ -1,0 +1,14 @@
+.input-div {
+	width: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: flex-start;
+}
+.input-label {
+
+}
+.input-area {
+	margin: auto;
+	resize: vertical;
+	width: 95%;
+}

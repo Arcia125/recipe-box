@@ -1,0 +1,17 @@
+// variables
+@import "utilities/variables";
+// recipebox.scss
+@import "app/recipebox";
+// recipe.scss
+@import "app/components/ingredient/ingredient";
+// inputbox.scss
+@import "app/components/inputbox/inputbox";
+// modal.scss
+@import "app/components/modal/modal";
+// recipe.scss
+@import "app/components/recipe/recipe";
+
+body {
+	background: $body-bg-color;
+	color: white;
+}

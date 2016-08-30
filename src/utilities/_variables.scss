@@ -1,0 +1,23 @@
+$body-bg-color: #160724;
+$container-bg-color: #4F2567;
+$panel-bg-color: #8A4389;
+$recipe-bg-color: darken($panel-bg-color, 5);
+$ingredient-bg-color: darken($recipe-bg-color, 5);
+$ingredient-border-color: darken($ingredient-bg-color, 10);
+$ingredient-outline: 2px solid $ingredient-border-color;
+$button-bg-color: lighten($panel-bg-color, 25);
+@mixin button-std() {
+	background: $button-bg-color;
+	border: none;
+	margin: 5px;
+	font-size: 25px;
+	color: white;
+	border-radius: .3em;
+	text-shadow: 2px 2px black;
+	&:focus {
+		outline: none;
+	}
+	&:hover {
+		opacity: .9;
+	}
+}

@@ -1,0 +1,65 @@
+.recipe-button {
+	width: 100%;
+	background: $panel-bg-color;
+	border: none;
+	margin-top: 2%;
+	margin-bottom: -2px;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	font-size: 3em;
+	color: white;
+	&-label {
+		color: white;
+	}
+	&-contents {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+	}
+	&-delete {
+		@include button-std;
+		height: 2em;
+		width: 6em;
+		margin: auto;
+	}
+	&-edit {
+		height: 2em;
+		width: 6em;
+		margin: auto;
+		@include button-std;
+	}
+	&:focus {
+		outline: none;
+	}
+}
+
+.recipe-content {
+	background: $recipe-bg-color;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.recipe-tab {
+	padding: 15px;
+}
+.expanded {
+	display: block;
+}
+.contracted {
+	display: none;
+}
+
+.recipe-header {
+	margin-top: -3px;
+	text-align: center;
+	font-size: 3em;
+}
+
+.recipe-ingredient-container {
+	margin: 0 0 3% 0;
+}
+
+.recipe-button-container {
+	margin: auto;
+	text-align: center;
+}

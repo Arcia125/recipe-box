@@ -1,0 +1,19 @@
+.app {
+	width: 60%;
+	height: 90%;
+	margin: 3% auto;
+}
+.react-container {
+	background: $container-bg-color;
+	border-radius: 5px;
+	padding: 1% 5% 3% 5%;
+}
+.add-recipe {
+	@include button-std;
+	margin-top: 5%;
+}
+.react-title {
+	font-size: 4em;
+	text-align: center;
+	margin: 0;
+}
