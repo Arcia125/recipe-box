@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import style from './main.scss';
-import RecipeBox from './app/recipebox.jsx';
+import RecipeBox from './app/recipebox';
 
 var recipeKey = '_kh_recipeBook';
 var recipes = [];

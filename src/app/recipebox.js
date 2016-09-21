@@ -1,7 +1,7 @@
 import React from 'react';
-import InputBox from './components/inputbox/inputbox.jsx';
-import Modal from './components/modal/modal.jsx';
-import Recipe from './components/recipe/recipe.jsx';
+import InputBox from './components/inputbox/inputbox';
+import Modal from './components/modal/modal';
+import Recipe from './components/recipe/recipe';
 var recipeKey = '_kh_recipeBook';
 
 class RecipeBox extends React.Component {

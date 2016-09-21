@@ -1,5 +1,5 @@
 import React from 'react';
-import Ingredient from '../ingredient/ingredient.jsx';
+import Ingredient from '../ingredient/ingredient';
 class Recipe extends React.Component {
     componentWillMount() {
         this.state = {

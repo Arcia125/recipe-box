@@ -1,41 +1,53 @@
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var webpack = require('webpack');
+var path = require('path');
+var OpenBrowserPlugin = require('open-browser-webpack-plugin');
+var host = 'localhost';
+var port = 8001;
+
 module.exports = {
 	entry: {
-		main: './src/main.jsx'
+		javascript: './src/main.js',
+		html: './src/index.html'
 	},
 	output: {
-		filename: './dist/[name].js'
+		filename: 'main.js',
+		path: __dirname + '/dist',
 	},
-	devServer: {
-		inline: true,
-		port: 8080
-	},
-	devtool: 'source-map',
 	module: {
 		loaders: [
 		{
             test: /\.scss$/,
+            exclude: /node_modules/,
             loaders: ["style", "css?sourceMap", "sass?sourceMap"]
             //loader: ExtractTextPlugin.extract('css!sass')
         },
 		{
-			test: /\.jsx$/,
-			exclude: /(node_modules|bower_components)/,
-			loader: 'react-hot'
-		},
-		{
-			test: /\.jsx$/,
-			exclude: /(node_modules|bower_components)/,
+			test: /\.js$/,
+			exclude: /node_modules/,
 			loader: 'babel',
 			query: {
-				presets: ['es2015', 'react']
+				presets: ['react', 'es2015']
 			}
+		},
+		{
+			test: /\.html$/,
+			exclude: /node_modules/,
+			loader: 'file?name=[name].[ext]'
+		},
+		{
+			test: /\.png$/,
+			exclude: /node_modules/,
+			loader: 'url-loader'
 		}
 		]
 	},
+	devServer: {
+		inline: true,
+		host: host,
+		port: port
+	},
+	devtool: 'source-map',
 	plugins: [
-		new ExtractTextPlugin('dist/main.css', {
-			allChunks: true
-		})
+		new OpenBrowserPlugin({ url: 'http://' + host + ':' + port}),
 	]
 }
